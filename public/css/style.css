@@ -1,10 +1,163 @@
-h1{
-    color: red;
+/* General */
+
+:root {
+    --bg-main: #ffffff;
+    --bg-body: #F0EFE9;
+    --font-body: "Arial", sans-serif;
+    --del-fill: red;
+    --check-fill: green;
+    --border-forms: #C6C7C5;
+    --primary: #50E3A4;
+    --headings: #D9801B;
+    --text: #3A3D50;
 }
-.completed{
-    text-decoration: line-through;
-    color: gray;
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
-.not{
-    text-decoration: underline;
+
+/* Layout */
+
+html {
+    font-size: 16px;
+}
+
+body {
+    padding: 3rem;
+    font-size: 1rem;
+    background-color: var(--bg-body);
+    font-family: var(--font-body);
+    color: var(--text);
+}
+
+main {
+    width: 30rem;
+    padding: 2rem;
+    margin: auto;
+    border-radius: 5px;
+    background-color: var(--bg-main);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
+}
+
+header {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Typography */
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--headings);
+}
+
+/* UI */
+
+.del {
+    fill: var(--del-fill);
+}
+
+.del:hover {
+    cursor: pointer;
+}
+
+.check {
+    fill: var(--check-fill);
+}
+
+.completed {
+    opacity: 0.5;
+}
+
+.check:hover {
+    cursor: pointer;
+}
+
+li span {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0 2rem 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+}
+
+.logout-link {
+    display: block;
+    color: #777;
+    margin-top: 1rem;
+}
+
+hr {
+    margin: 1rem auto;
+    background: var(--primary);
+    height: 3px;
+    border-radius: 100px;
+    border: none;
+}
+
+/* Forms */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"] {
+    border: 2px solid var(--border-forms);
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+button,
+input[type="submit"] {
+    border: none;
+    background-color: var(--primary);
+    border-radius: 5px;
+    padding: 0.5rem;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    cursor: hover;
+}
+
+/* Utility */
+
+.hidden {
+    display: none;
+}
+
+.flex {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
 }
